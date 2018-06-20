@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="25" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="25" unitdist="mil" unit="mm" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -52,7 +52,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -251,6 +251,22 @@
 <circle x="27" y="69.3" radius="1.75" width="0.1524" layer="40"/>
 <circle x="13" y="69.3" radius="1.75" width="0.1524" layer="40"/>
 <wire x1="0" y1="50" x2="150" y2="50" width="0.1524" layer="20"/>
+<hole x="13" y="69.3" drill="3.3"/>
+<hole x="27" y="69.3" drill="3.3"/>
+<hole x="13" y="40.3" drill="3.3"/>
+<hole x="27" y="40.3" drill="3.3"/>
+<hole x="43" y="40.3" drill="3.3"/>
+<hole x="57" y="40.3" drill="3.3"/>
+<hole x="93" y="40.3" drill="3.3"/>
+<hole x="123" y="40.3" drill="3.3"/>
+<hole x="107" y="40.3" drill="3.3"/>
+<hole x="137" y="40.3" drill="3.3"/>
+<hole x="137" y="69.3" drill="3.3"/>
+<hole x="123" y="69.3" drill="3.3"/>
+<hole x="107" y="69.3" drill="3.3"/>
+<hole x="93" y="69.3" drill="3.3"/>
+<hole x="57" y="69.3" drill="3.3"/>
+<hole x="43" y="69.3" drill="3.3"/>
 </plain>
 <libraries>
 <library name="40xx">
@@ -2966,12 +2982,12 @@ design rules under a new name.</description>
 <signal name="N$40">
 <contactref element="T12" pad="1"/>
 <contactref element="ARDUINO_NANO1" pad="28"/>
-<wire x1="101.6" y1="88.265" x2="101.6" y2="95.885" width="0.3048" layer="16"/>
+<wire x1="101.6" y1="90.805" x2="101.6" y2="95.885" width="0.3048" layer="16"/>
 <wire x1="53.66" y1="74.615" x2="53.975" y2="74.93" width="0.3048" layer="1"/>
 <via x="53.975" y="74.93" extent="1-16" drill="0.4" diameter="0.65"/>
-<wire x1="53.975" y1="74.93" x2="88.265" y2="74.93" width="0.3048" layer="16"/>
+<wire x1="53.975" y1="74.93" x2="85.725" y2="74.93" width="0.3048" layer="16"/>
 <wire x1="51.9" y1="74.615" x2="53.66" y2="74.615" width="0.3048" layer="1"/>
-<wire x1="88.265" y1="74.93" x2="101.6" y2="88.265" width="0.3048" layer="16"/>
+<wire x1="85.725" y1="74.93" x2="101.6" y2="90.805" width="0.3048" layer="16"/>
 </signal>
 <signal name="+12V">
 <contactref element="SV7" pad="4"/>
@@ -3012,10 +3028,10 @@ design rules under a new name.</description>
 <via x="15.875" y="74.93" extent="1-16" drill="0.4" diameter="0.65"/>
 <wire x1="17.145" y1="76.2" x2="15.875" y2="74.93" width="0.3048" layer="16"/>
 <wire x1="56.515" y1="76.2" x2="17.145" y2="76.2" width="0.3048" layer="16"/>
-<wire x1="99.06" y1="95.885" x2="99.06" y2="86.995" width="0.3048" layer="16"/>
+<wire x1="99.06" y1="89.535" x2="99.06" y2="95.885" width="0.3048" layer="16"/>
 <wire x1="57.15" y1="75.565" x2="56.515" y2="76.2" width="0.3048" layer="16"/>
-<wire x1="99.06" y1="86.995" x2="87.63" y2="75.565" width="0.3048" layer="16"/>
-<wire x1="87.63" y1="75.565" x2="57.15" y2="75.565" width="0.3048" layer="16"/>
+<wire x1="57.15" y1="75.565" x2="85.09" y2="75.565" width="0.3048" layer="16"/>
+<wire x1="85.09" y1="75.565" x2="99.06" y2="89.535" width="0.3048" layer="16"/>
 </signal>
 <signal name="N$48">
 <contactref element="T13" pad="1"/>
@@ -3504,8 +3520,10 @@ design rules under a new name.</description>
 <contactref element="R19" pad="2"/>
 <contactref element="ARDUINO_NANO1" pad="15"/>
 <wire x1="143.93" y1="75.565" x2="142.875" y2="75.565" width="0.3048" layer="1"/>
-<wire x1="142.875" y1="75.565" x2="137.795" y2="80.645" width="0.3048" layer="1"/>
-<wire x1="137.795" y1="80.645" x2="132.08" y2="80.645" width="0.3048" layer="1"/>
+<wire x1="142.875" y1="75.565" x2="140.335" y2="78.105" width="0.3048" layer="1"/>
+<wire x1="140.335" y1="78.105" x2="133.985" y2="78.105" width="0.3048" layer="1"/>
+<wire x1="133.985" y1="78.105" x2="132.08" y2="80.01" width="0.3048" layer="1"/>
+<wire x1="132.08" y1="80.01" x2="132.08" y2="80.645" width="0.3048" layer="1"/>
 </signal>
 </signals>
 </board>
