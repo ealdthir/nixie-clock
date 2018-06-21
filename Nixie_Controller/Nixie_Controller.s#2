@@ -7671,8 +7671,6 @@ by exp-project-lbr.ulp</description>
 <part name="C10" library="resistor" deviceset="C-EU" device="C0805" value="1u"/>
 <part name="R16" library="resistor" deviceset="R-EU_" device="R0603" value="0"/>
 <part name="R17" library="resistor" deviceset="R-EU_" device="R0603" value="10k"/>
-<part name="R18" library="resistor" deviceset="R-EU_" device="R0603" value="10k"/>
-<part name="P+17" library="supply1" deviceset="+5V" device=""/>
 <part name="P+18" library="supply1" deviceset="+5V" device=""/>
 <part name="R19" library="resistor" deviceset="R-EU_" device="R0603" value="0"/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
@@ -7781,8 +7779,6 @@ by exp-project-lbr.ulp</description>
 <instance part="IC1" gate="P" x="193.04" y="134.62"/>
 <instance part="R16" gate="G$1" x="33.02" y="149.86" rot="R180"/>
 <instance part="R17" gate="G$1" x="25.4" y="167.64" rot="R270"/>
-<instance part="R18" gate="G$1" x="-20.32" y="165.1" rot="R270"/>
-<instance part="P+17" gate="1" x="-20.32" y="177.8"/>
 <instance part="P+18" gate="1" x="25.4" y="180.34"/>
 <instance part="R19" gate="G$1" x="17.78" y="167.64" rot="R270"/>
 <instance part="GND19" gate="1" x="317.5" y="200.66"/>
@@ -9118,16 +9114,6 @@ by exp-project-lbr.ulp</description>
 <wire x1="38.1" y1="149.86" x2="48.26" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$95" class="0">
-<segment>
-<pinref part="ARDUINO_NANO1" gate="G$1" pin="!RESET@1"/>
-<wire x1="-20.32" y1="149.86" x2="-22.86" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="-22.86" y1="149.86" x2="-22.86" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="-22.86" y1="157.48" x2="-20.32" y2="157.48" width="0.1524" layer="91"/>
-<pinref part="R18" gate="G$1" pin="2"/>
-<wire x1="-20.32" y1="157.48" x2="-20.32" y2="160.02" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="+5V" class="0">
 <segment>
 <pinref part="R17" gate="G$1" pin="1"/>
@@ -9138,11 +9124,6 @@ by exp-project-lbr.ulp</description>
 <wire x1="17.78" y1="172.72" x2="17.78" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="175.26" x2="25.4" y2="175.26" width="0.1524" layer="91"/>
 <junction x="25.4" y="175.26"/>
-</segment>
-<segment>
-<pinref part="R18" gate="G$1" pin="1"/>
-<pinref part="P+17" gate="1" pin="+5V"/>
-<wire x1="-20.32" y1="175.26" x2="-20.32" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$96" class="0">
