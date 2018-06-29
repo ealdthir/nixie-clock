@@ -7654,7 +7654,7 @@ by exp-project-lbr.ulp</description>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="P+7" library="supply1" deviceset="+5V" device=""/>
-<part name="U$1" library="rpi-zero" deviceset="RPI-ZERO" device=""/>
+<part name="RPI" library="rpi-zero" deviceset="RPI-ZERO" device=""/>
 <part name="SV6" library="con-lstb" deviceset="MA05-1" device=""/>
 <part name="P+12" library="supply1" deviceset="+12V" device=""/>
 <part name="P+13" library="supply1" deviceset="+24V" device=""/>
@@ -7664,8 +7664,8 @@ by exp-project-lbr.ulp</description>
 <part name="SV9" library="con-lstb" deviceset="MA12-2" device=""/>
 <part name="SV8" library="con-lstb" deviceset="MA12-2" device=""/>
 <part name="P+15" library="supply1" deviceset="+5V" device=""/>
-<part name="U$2" library="Nixie_library" deviceset="USB-TYPE-C" device=""/>
-<part name="U$3" library="Nixie_library" deviceset="USB-TYPE-C" device=""/>
+<part name="USBC2" library="Nixie_library" deviceset="USB-TYPE-C" device=""/>
+<part name="USBC1" library="Nixie_library" deviceset="USB-TYPE-C" device=""/>
 <part name="SV10" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="P+16" library="supply1" deviceset="+24V" device="" value="+24V"/>
 <part name="C1" library="resistor" deviceset="C-EU" device="C0805" value="100n"/>
@@ -7774,7 +7774,7 @@ by exp-project-lbr.ulp</description>
 <instance part="GND16" gate="1" x="-78.74" y="111.76"/>
 <instance part="GND17" gate="1" x="22.86" y="111.76"/>
 <instance part="P+7" gate="1" x="43.18" y="180.34"/>
-<instance part="U$1" gate="G$1" x="73.66" y="132.08" rot="MR0"/>
+<instance part="RPI" gate="G$1" x="73.66" y="132.08" rot="MR0"/>
 <instance part="SV6" gate="G$1" x="165.1" y="147.32"/>
 <instance part="P+12" gate="1" x="185.42" y="160.02"/>
 <instance part="P+13" gate="1" x="177.8" y="160.02"/>
@@ -7784,8 +7784,8 @@ by exp-project-lbr.ulp</description>
 <instance part="SV9" gate="1" x="302.26" y="137.16"/>
 <instance part="SV8" gate="1" x="302.26" y="223.52"/>
 <instance part="P+15" gate="1" x="261.62" y="203.2"/>
-<instance part="U$2" gate="G$1" x="322.58" y="208.28"/>
-<instance part="U$3" gate="G$1" x="322.58" y="121.92"/>
+<instance part="USBC2" gate="G$1" x="322.58" y="208.28"/>
+<instance part="USBC1" gate="G$1" x="322.58" y="121.92"/>
 <instance part="SV10" gate="G$1" x="251.46" y="187.96"/>
 <instance part="P+16" gate="1" x="109.22" y="132.08"/>
 <instance part="C1" gate="G$1" x="106.68" y="121.92"/>
@@ -8026,10 +8026,10 @@ by exp-project-lbr.ulp</description>
 <wire x1="96.52" y1="114.3" x2="104.14" y2="114.3" width="0.1524" layer="91"/>
 <junction x="104.14" y="114.3"/>
 <junction x="104.14" y="152.4"/>
-<pinref part="U$1" gate="G$1" pin="GPIO3/SCL1"/>
-<pinref part="U$1" gate="G$1" pin="GND@1"/>
-<pinref part="U$1" gate="G$1" pin="GND@3"/>
-<pinref part="U$1" gate="G$1" pin="GND@2"/>
+<pinref part="RPI" gate="G$1" pin="GPIO3/SCL1"/>
+<pinref part="RPI" gate="G$1" pin="GND@1"/>
+<pinref part="RPI" gate="G$1" pin="GND@3"/>
+<pinref part="RPI" gate="G$1" pin="GND@2"/>
 <wire x1="96.52" y1="132.08" x2="104.14" y2="132.08" width="0.1524" layer="91"/>
 <junction x="104.14" y="132.08"/>
 </segment>
@@ -8116,11 +8116,11 @@ by exp-project-lbr.ulp</description>
 <wire x1="48.26" y1="121.92" x2="40.64" y2="121.92" width="0.1524" layer="91"/>
 <junction x="40.64" y="121.92"/>
 <wire x1="48.26" y1="147.32" x2="40.64" y2="147.32" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="GND@8"/>
-<pinref part="U$1" gate="G$1" pin="GND@4"/>
-<pinref part="U$1" gate="G$1" pin="GND@5"/>
-<pinref part="U$1" gate="G$1" pin="GND@6"/>
-<pinref part="U$1" gate="G$1" pin="GND@7"/>
+<pinref part="RPI" gate="G$1" pin="GND@8"/>
+<pinref part="RPI" gate="G$1" pin="GND@4"/>
+<pinref part="RPI" gate="G$1" pin="GND@5"/>
+<pinref part="RPI" gate="G$1" pin="GND@6"/>
+<pinref part="RPI" gate="G$1" pin="GND@7"/>
 <junction x="40.64" y="147.32"/>
 <junction x="40.64" y="152.4"/>
 </segment>
@@ -8130,17 +8130,17 @@ by exp-project-lbr.ulp</description>
 <pinref part="IC1" gate="P" pin="VSS"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="B12_GND"/>
+<pinref part="USBC1" gate="G$1" pin="B12_GND"/>
 <pinref part="SV9" gate="1" pin="24"/>
 <wire x1="294.64" y1="152.4" x2="292.1" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="152.4" x2="292.1" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="160.02" x2="365.76" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="365.76" y1="160.02" x2="365.76" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="365.76" y1="152.4" x2="363.22" y2="152.4" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="B1_GND"/>
+<pinref part="USBC1" gate="G$1" pin="B1_GND"/>
 <pinref part="GND20" gate="1" pin="GND"/>
-<pinref part="U$3" gate="G$1" pin="A12_GND"/>
-<pinref part="U$3" gate="G$1" pin="A1_GND"/>
+<pinref part="USBC1" gate="G$1" pin="A12_GND"/>
+<pinref part="USBC1" gate="G$1" pin="A1_GND"/>
 <pinref part="SV9" gate="1" pin="23"/>
 <wire x1="309.88" y1="152.4" x2="312.42" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="312.42" y1="152.4" x2="317.5" y2="152.4" width="0.1524" layer="91"/>
@@ -8173,11 +8173,11 @@ by exp-project-lbr.ulp</description>
 <wire x1="317.5" y1="182.88" x2="317.5" y2="205.74" width="0.1524" layer="91"/>
 <pinref part="SV8" gate="1" pin="1"/>
 <wire x1="309.88" y1="210.82" x2="314.96" y2="210.82" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="A12_GND"/>
+<pinref part="USBC2" gate="G$1" pin="A12_GND"/>
 <wire x1="314.96" y1="210.82" x2="317.5" y2="210.82" width="0.1524" layer="91"/>
 <wire x1="317.5" y1="205.74" x2="314.96" y2="205.74" width="0.1524" layer="91"/>
 <wire x1="314.96" y1="205.74" x2="314.96" y2="210.82" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="A1_GND"/>
+<pinref part="USBC2" gate="G$1" pin="A1_GND"/>
 <wire x1="317.5" y1="238.76" x2="314.96" y2="238.76" width="0.1524" layer="91"/>
 <pinref part="SV8" gate="1" pin="23"/>
 <wire x1="309.88" y1="238.76" x2="314.96" y2="238.76" width="0.1524" layer="91"/>
@@ -8189,7 +8189,7 @@ by exp-project-lbr.ulp</description>
 <wire x1="292.1" y1="246.38" x2="365.76" y2="246.38" width="0.1524" layer="91"/>
 <wire x1="365.76" y1="246.38" x2="365.76" y2="238.76" width="0.1524" layer="91"/>
 <wire x1="365.76" y1="238.76" x2="363.22" y2="238.76" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="B12_GND"/>
+<pinref part="USBC2" gate="G$1" pin="B12_GND"/>
 <wire x1="363.22" y1="238.76" x2="360.68" y2="238.76" width="0.1524" layer="91"/>
 <wire x1="363.22" y1="238.76" x2="363.22" y2="210.82" width="0.1524" layer="91"/>
 <wire x1="363.22" y1="210.82" x2="363.22" y2="182.88" width="0.1524" layer="91"/>
@@ -8201,7 +8201,7 @@ by exp-project-lbr.ulp</description>
 <wire x1="365.76" y1="203.2" x2="365.76" y2="210.82" width="0.1524" layer="91"/>
 <wire x1="365.76" y1="210.82" x2="363.22" y2="210.82" width="0.1524" layer="91"/>
 <wire x1="363.22" y1="210.82" x2="360.68" y2="210.82" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="B1_GND"/>
+<pinref part="USBC2" gate="G$1" pin="B1_GND"/>
 <junction x="363.22" y="210.82"/>
 <junction x="314.96" y="238.76"/>
 <junction x="363.22" y="238.76"/>
@@ -8753,14 +8753,14 @@ by exp-project-lbr.ulp</description>
 <segment>
 <pinref part="SV9" gate="1" pin="21"/>
 <wire x1="309.88" y1="149.86" x2="317.5" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="A2_TX1+"/>
+<pinref part="USBC1" gate="G$1" pin="A2_TX1+"/>
 </segment>
 </net>
 <net name="N$60" class="0">
 <segment>
 <pinref part="SV9" gate="1" pin="19"/>
 <wire x1="309.88" y1="147.32" x2="317.5" y2="147.32" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="A3_TX1-"/>
+<pinref part="USBC1" gate="G$1" pin="A3_TX1-"/>
 </segment>
 </net>
 <net name="N$61" class="0">
@@ -8771,7 +8771,7 @@ by exp-project-lbr.ulp</description>
 <wire x1="314.96" y1="144.78" x2="314.96" y2="182.88" width="0.1524" layer="91"/>
 <wire x1="314.96" y1="182.88" x2="261.62" y2="182.88" width="0.1524" layer="91"/>
 <junction x="314.96" y="144.78"/>
-<pinref part="U$3" gate="G$1" pin="A4_VBUS"/>
+<pinref part="USBC1" gate="G$1" pin="A4_VBUS"/>
 <wire x1="261.62" y1="182.88" x2="261.62" y2="185.42" width="0.1524" layer="91"/>
 <pinref part="SV10" gate="G$1" pin="1"/>
 <wire x1="261.62" y1="185.42" x2="259.08" y2="185.42" width="0.1524" layer="91"/>
@@ -8781,49 +8781,49 @@ by exp-project-lbr.ulp</description>
 <segment>
 <pinref part="SV9" gate="1" pin="15"/>
 <wire x1="309.88" y1="142.24" x2="317.5" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="A5_CC1"/>
+<pinref part="USBC1" gate="G$1" pin="A5_CC1"/>
 </segment>
 </net>
 <net name="N$63" class="0">
 <segment>
 <pinref part="SV9" gate="1" pin="13"/>
 <wire x1="309.88" y1="139.7" x2="317.5" y2="139.7" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="A6_D+"/>
+<pinref part="USBC1" gate="G$1" pin="A6_D+"/>
 </segment>
 </net>
 <net name="N$64" class="0">
 <segment>
 <pinref part="SV9" gate="1" pin="11"/>
 <wire x1="309.88" y1="137.16" x2="317.5" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="A7_D-"/>
+<pinref part="USBC1" gate="G$1" pin="A7_D-"/>
 </segment>
 </net>
 <net name="N$65" class="0">
 <segment>
 <pinref part="SV9" gate="1" pin="9"/>
 <wire x1="309.88" y1="134.62" x2="317.5" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="A8_SBU1"/>
+<pinref part="USBC1" gate="G$1" pin="A8_SBU1"/>
 </segment>
 </net>
 <net name="N$66" class="0">
 <segment>
 <pinref part="SV9" gate="1" pin="7"/>
 <wire x1="309.88" y1="132.08" x2="317.5" y2="132.08" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="A9_VBUS"/>
+<pinref part="USBC1" gate="G$1" pin="A9_VBUS"/>
 </segment>
 </net>
 <net name="N$67" class="0">
 <segment>
 <pinref part="SV9" gate="1" pin="5"/>
 <wire x1="309.88" y1="129.54" x2="317.5" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="A10_RX2-"/>
+<pinref part="USBC1" gate="G$1" pin="A10_RX2-"/>
 </segment>
 </net>
 <net name="N$68" class="0">
 <segment>
 <pinref part="SV9" gate="1" pin="3"/>
 <wire x1="309.88" y1="127" x2="317.5" y2="127" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="A11_RX2+"/>
+<pinref part="USBC1" gate="G$1" pin="A11_RX2+"/>
 </segment>
 </net>
 <net name="N$71" class="0">
@@ -8834,7 +8834,7 @@ by exp-project-lbr.ulp</description>
 <wire x1="289.56" y1="114.3" x2="289.56" y2="127" width="0.1524" layer="91"/>
 <pinref part="SV9" gate="1" pin="4"/>
 <wire x1="289.56" y1="127" x2="294.64" y2="127" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="B2_TX2+"/>
+<pinref part="USBC1" gate="G$1" pin="B2_TX2+"/>
 </segment>
 </net>
 <net name="N$72" class="0">
@@ -8845,7 +8845,7 @@ by exp-project-lbr.ulp</description>
 <wire x1="287.02" y1="111.76" x2="370.84" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="370.84" y1="111.76" x2="370.84" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="370.84" y1="129.54" x2="360.68" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="B3_TX2-"/>
+<pinref part="USBC1" gate="G$1" pin="B3_TX2-"/>
 </segment>
 </net>
 <net name="N$73" class="0">
@@ -8856,7 +8856,7 @@ by exp-project-lbr.ulp</description>
 <wire x1="284.48" y1="109.22" x2="284.48" y2="132.08" width="0.1524" layer="91"/>
 <pinref part="SV9" gate="1" pin="8"/>
 <wire x1="284.48" y1="132.08" x2="294.64" y2="132.08" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="B4_VBUS"/>
+<pinref part="USBC1" gate="G$1" pin="B4_VBUS"/>
 </segment>
 </net>
 <net name="N$74" class="0">
@@ -8867,7 +8867,7 @@ by exp-project-lbr.ulp</description>
 <wire x1="281.94" y1="106.68" x2="375.92" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="375.92" y1="106.68" x2="375.92" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="375.92" y1="134.62" x2="360.68" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="B5_CC2"/>
+<pinref part="USBC1" gate="G$1" pin="B5_CC2"/>
 </segment>
 </net>
 <net name="N$75" class="0">
@@ -8878,7 +8878,7 @@ by exp-project-lbr.ulp</description>
 <wire x1="279.4" y1="104.14" x2="378.46" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="378.46" y1="104.14" x2="378.46" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="378.46" y1="137.16" x2="360.68" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="B6_D+"/>
+<pinref part="USBC1" gate="G$1" pin="B6_D+"/>
 </segment>
 </net>
 <net name="N$77" class="0">
@@ -8889,7 +8889,7 @@ by exp-project-lbr.ulp</description>
 <wire x1="289.56" y1="162.56" x2="289.56" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="SV9" gate="1" pin="22"/>
 <wire x1="289.56" y1="149.86" x2="294.64" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="B11_RX1+"/>
+<pinref part="USBC1" gate="G$1" pin="B11_RX1+"/>
 </segment>
 </net>
 <net name="N$78" class="0">
@@ -8900,7 +8900,7 @@ by exp-project-lbr.ulp</description>
 <wire x1="287.02" y1="165.1" x2="370.84" y2="165.1" width="0.1524" layer="91"/>
 <wire x1="370.84" y1="165.1" x2="370.84" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="370.84" y1="147.32" x2="360.68" y2="147.32" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="B10_RX1-"/>
+<pinref part="USBC1" gate="G$1" pin="B10_RX1-"/>
 </segment>
 </net>
 <net name="N$79" class="0">
@@ -8911,7 +8911,7 @@ by exp-project-lbr.ulp</description>
 <pinref part="SV9" gate="1" pin="18"/>
 <wire x1="284.48" y1="167.64" x2="284.48" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="284.48" y1="144.78" x2="294.64" y2="144.78" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="B9_VBUS"/>
+<pinref part="USBC1" gate="G$1" pin="B9_VBUS"/>
 </segment>
 </net>
 <net name="N$80" class="0">
@@ -8922,7 +8922,7 @@ by exp-project-lbr.ulp</description>
 <wire x1="281.94" y1="170.18" x2="375.92" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="375.92" y1="170.18" x2="375.92" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="375.92" y1="142.24" x2="360.68" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="B8_SBU2"/>
+<pinref part="USBC1" gate="G$1" pin="B8_SBU2"/>
 </segment>
 </net>
 <net name="N$81" class="0">
@@ -8933,77 +8933,77 @@ by exp-project-lbr.ulp</description>
 <wire x1="279.4" y1="172.72" x2="378.46" y2="172.72" width="0.1524" layer="91"/>
 <wire x1="378.46" y1="172.72" x2="378.46" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="378.46" y1="139.7" x2="360.68" y2="139.7" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="B7_D-"/>
+<pinref part="USBC1" gate="G$1" pin="B7_D-"/>
 </segment>
 </net>
 <net name="N$41" class="0">
 <segment>
 <pinref part="SV8" gate="1" pin="21"/>
 <wire x1="309.88" y1="236.22" x2="317.5" y2="236.22" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="A2_TX1+"/>
+<pinref part="USBC2" gate="G$1" pin="A2_TX1+"/>
 </segment>
 </net>
 <net name="N$42" class="0">
 <segment>
 <pinref part="SV8" gate="1" pin="19"/>
 <wire x1="309.88" y1="233.68" x2="317.5" y2="233.68" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="A3_TX1-"/>
+<pinref part="USBC2" gate="G$1" pin="A3_TX1-"/>
 </segment>
 </net>
 <net name="N$47" class="0">
 <segment>
 <pinref part="SV8" gate="1" pin="17"/>
 <wire x1="309.88" y1="231.14" x2="317.5" y2="231.14" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="A4_VBUS"/>
+<pinref part="USBC2" gate="G$1" pin="A4_VBUS"/>
 </segment>
 </net>
 <net name="N$50" class="0">
 <segment>
 <pinref part="SV8" gate="1" pin="15"/>
 <wire x1="309.88" y1="228.6" x2="317.5" y2="228.6" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="A5_CC1"/>
+<pinref part="USBC2" gate="G$1" pin="A5_CC1"/>
 </segment>
 </net>
 <net name="N$51" class="0">
 <segment>
 <pinref part="SV8" gate="1" pin="13"/>
 <wire x1="309.88" y1="226.06" x2="317.5" y2="226.06" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="A6_D+"/>
+<pinref part="USBC2" gate="G$1" pin="A6_D+"/>
 </segment>
 </net>
 <net name="N$52" class="0">
 <segment>
 <pinref part="SV8" gate="1" pin="11"/>
 <wire x1="309.88" y1="223.52" x2="317.5" y2="223.52" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="A7_D-"/>
+<pinref part="USBC2" gate="G$1" pin="A7_D-"/>
 </segment>
 </net>
 <net name="N$53" class="0">
 <segment>
 <pinref part="SV8" gate="1" pin="9"/>
 <wire x1="309.88" y1="220.98" x2="317.5" y2="220.98" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="A8_SBU1"/>
+<pinref part="USBC2" gate="G$1" pin="A8_SBU1"/>
 </segment>
 </net>
 <net name="N$54" class="0">
 <segment>
 <pinref part="SV8" gate="1" pin="7"/>
 <wire x1="309.88" y1="218.44" x2="317.5" y2="218.44" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="A9_VBUS"/>
+<pinref part="USBC2" gate="G$1" pin="A9_VBUS"/>
 </segment>
 </net>
 <net name="N$55" class="0">
 <segment>
 <pinref part="SV8" gate="1" pin="5"/>
 <wire x1="309.88" y1="215.9" x2="317.5" y2="215.9" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="A10_RX2-"/>
+<pinref part="USBC2" gate="G$1" pin="A10_RX2-"/>
 </segment>
 </net>
 <net name="N$56" class="0">
 <segment>
 <pinref part="SV8" gate="1" pin="3"/>
 <wire x1="309.88" y1="213.36" x2="317.5" y2="213.36" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="A11_RX2+"/>
+<pinref part="USBC2" gate="G$1" pin="A11_RX2+"/>
 </segment>
 </net>
 <net name="N$83" class="0">
@@ -9014,7 +9014,7 @@ by exp-project-lbr.ulp</description>
 <wire x1="289.56" y1="200.66" x2="289.56" y2="213.36" width="0.1524" layer="91"/>
 <pinref part="SV8" gate="1" pin="4"/>
 <wire x1="289.56" y1="213.36" x2="294.64" y2="213.36" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="B2_TX2+"/>
+<pinref part="USBC2" gate="G$1" pin="B2_TX2+"/>
 </segment>
 </net>
 <net name="N$84" class="0">
@@ -9025,7 +9025,7 @@ by exp-project-lbr.ulp</description>
 <wire x1="287.02" y1="198.12" x2="370.84" y2="198.12" width="0.1524" layer="91"/>
 <wire x1="370.84" y1="198.12" x2="370.84" y2="215.9" width="0.1524" layer="91"/>
 <wire x1="370.84" y1="215.9" x2="360.68" y2="215.9" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="B3_TX2-"/>
+<pinref part="USBC2" gate="G$1" pin="B3_TX2-"/>
 </segment>
 </net>
 <net name="N$85" class="0">
@@ -9036,7 +9036,7 @@ by exp-project-lbr.ulp</description>
 <wire x1="284.48" y1="195.58" x2="284.48" y2="218.44" width="0.1524" layer="91"/>
 <pinref part="SV8" gate="1" pin="8"/>
 <wire x1="284.48" y1="218.44" x2="294.64" y2="218.44" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="B4_VBUS"/>
+<pinref part="USBC2" gate="G$1" pin="B4_VBUS"/>
 </segment>
 </net>
 <net name="N$86" class="0">
@@ -9047,7 +9047,7 @@ by exp-project-lbr.ulp</description>
 <wire x1="281.94" y1="193.04" x2="375.92" y2="193.04" width="0.1524" layer="91"/>
 <wire x1="375.92" y1="193.04" x2="375.92" y2="220.98" width="0.1524" layer="91"/>
 <wire x1="375.92" y1="220.98" x2="360.68" y2="220.98" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="B5_CC2"/>
+<pinref part="USBC2" gate="G$1" pin="B5_CC2"/>
 </segment>
 </net>
 <net name="N$87" class="0">
@@ -9058,7 +9058,7 @@ by exp-project-lbr.ulp</description>
 <wire x1="279.4" y1="190.5" x2="378.46" y2="190.5" width="0.1524" layer="91"/>
 <wire x1="378.46" y1="190.5" x2="378.46" y2="223.52" width="0.1524" layer="91"/>
 <wire x1="378.46" y1="223.52" x2="360.68" y2="223.52" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="B6_D+"/>
+<pinref part="USBC2" gate="G$1" pin="B6_D+"/>
 </segment>
 </net>
 <net name="N$89" class="0">
@@ -9069,7 +9069,7 @@ by exp-project-lbr.ulp</description>
 <wire x1="289.56" y1="248.92" x2="289.56" y2="236.22" width="0.1524" layer="91"/>
 <pinref part="SV8" gate="1" pin="22"/>
 <wire x1="289.56" y1="236.22" x2="294.64" y2="236.22" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="B11_RX1+"/>
+<pinref part="USBC2" gate="G$1" pin="B11_RX1+"/>
 </segment>
 </net>
 <net name="N$90" class="0">
@@ -9080,7 +9080,7 @@ by exp-project-lbr.ulp</description>
 <wire x1="287.02" y1="251.46" x2="370.84" y2="251.46" width="0.1524" layer="91"/>
 <wire x1="370.84" y1="251.46" x2="370.84" y2="233.68" width="0.1524" layer="91"/>
 <wire x1="370.84" y1="233.68" x2="360.68" y2="233.68" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="B10_RX1-"/>
+<pinref part="USBC2" gate="G$1" pin="B10_RX1-"/>
 </segment>
 </net>
 <net name="N$91" class="0">
@@ -9091,7 +9091,7 @@ by exp-project-lbr.ulp</description>
 <pinref part="SV8" gate="1" pin="18"/>
 <wire x1="284.48" y1="254" x2="284.48" y2="231.14" width="0.1524" layer="91"/>
 <wire x1="284.48" y1="231.14" x2="294.64" y2="231.14" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="B9_VBUS"/>
+<pinref part="USBC2" gate="G$1" pin="B9_VBUS"/>
 <pinref part="SV10" gate="G$1" pin="3"/>
 <wire x1="274.32" y1="231.14" x2="274.32" y2="190.5" width="0.1524" layer="91"/>
 <wire x1="274.32" y1="190.5" x2="259.08" y2="190.5" width="0.1524" layer="91"/>
@@ -9107,7 +9107,7 @@ by exp-project-lbr.ulp</description>
 <wire x1="281.94" y1="256.54" x2="375.92" y2="256.54" width="0.1524" layer="91"/>
 <wire x1="375.92" y1="256.54" x2="375.92" y2="228.6" width="0.1524" layer="91"/>
 <wire x1="375.92" y1="228.6" x2="360.68" y2="228.6" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="B8_SBU2"/>
+<pinref part="USBC2" gate="G$1" pin="B8_SBU2"/>
 </segment>
 </net>
 <net name="N$93" class="0">
@@ -9118,7 +9118,7 @@ by exp-project-lbr.ulp</description>
 <wire x1="279.4" y1="259.08" x2="378.46" y2="259.08" width="0.1524" layer="91"/>
 <wire x1="378.46" y1="259.08" x2="378.46" y2="226.06" width="0.1524" layer="91"/>
 <wire x1="378.46" y1="226.06" x2="360.68" y2="226.06" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="B7_D-"/>
+<pinref part="USBC2" gate="G$1" pin="B7_D-"/>
 </segment>
 </net>
 <net name="+24V" class="0">
@@ -9160,7 +9160,7 @@ by exp-project-lbr.ulp</description>
 <net name="N$94" class="0">
 <segment>
 <pinref part="R16" gate="G$1" pin="1"/>
-<pinref part="U$1" gate="G$1" pin="GPIO18"/>
+<pinref part="RPI" gate="G$1" pin="GPIO18"/>
 <wire x1="25.4" y1="149.86" x2="48.26" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -9187,8 +9187,8 @@ by exp-project-lbr.ulp</description>
 <wire x1="109.22" y1="162.56" x2="109.22" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="162.56" x2="109.22" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="142.24" x2="96.52" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="3V3@1"/>
-<pinref part="U$1" gate="G$1" pin="3V3@2"/>
+<pinref part="RPI" gate="G$1" pin="3V3@1"/>
+<pinref part="RPI" gate="G$1" pin="3V3@2"/>
 <pinref part="R20" gate="G$1" pin="2"/>
 <wire x1="109.22" y1="162.56" x2="109.22" y2="165.1" width="0.1524" layer="91"/>
 <junction x="109.22" y="162.56"/>
@@ -9199,8 +9199,8 @@ by exp-project-lbr.ulp</description>
 <wire x1="48.26" y1="160.02" x2="43.18" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="160.02" x2="43.18" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="162.56" x2="48.26" y2="162.56" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="5V0@1"/>
-<pinref part="U$1" gate="G$1" pin="5V0@2"/>
+<pinref part="RPI" gate="G$1" pin="5V0@1"/>
+<pinref part="RPI" gate="G$1" pin="5V0@2"/>
 <pinref part="R18" gate="G$1" pin="2"/>
 <wire x1="43.18" y1="165.1" x2="43.18" y2="162.56" width="0.1524" layer="91"/>
 <junction x="43.18" y="162.56"/>
