@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.0.1">
+<eagle version="9.0.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="25" unitdist="mil" unit="mm" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mm"/>
@@ -2081,10 +2082,11 @@ design rules under a new name.</description>
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
-<param name="checkGrid" value="0"/>
 <param name="checkAngle" value="1"/>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
+<param name="checkStop" value="0"/>
+<param name="checkValues" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
@@ -2283,10 +2285,10 @@ design rules under a new name.</description>
 <element name="U$2" library="Nixie_library" package="USB-TYPE-C" value="USB-TYPE-C" x="36.83" y="5.461"/>
 <element name="U$3" library="Nixie_library" package="USB-TYPE-C" value="USB-TYPE-C" x="15.494" y="5.461"/>
 <element name="SV10" library="con-lstb" package="MA03-1" value="" x="17.78" y="27.94">
+<attribute name="MF" value="" x="17.78" y="27.94" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="17.78" y="27.94" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="17.78" y="27.94" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="17.78" y="27.94" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="" x="17.78" y="27.94" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="17.78" y="27.94" size="1.778" layer="27" display="off"/>
 </element>
 <element name="C1" library="resistor" package="C0805" value="100n" x="17.78" y="95.25" rot="R90"/>
 <element name="C10" library="resistor" package="C0805" value="1u" x="20.32" y="95.25" rot="R90"/>
@@ -2296,6 +2298,14 @@ design rules under a new name.</description>
 <element name="R18" library="resistor" package="R0603" value="0" x="73.025" y="22.225" rot="R270"/>
 <element name="R20" library="resistor" package="R0603" value="0" x="55.245" y="35.56"/>
 <element name="R21" library="resistor" package="R0603" value="0" x="46.99" y="92.71"/>
+<element name="R22" library="resistor" package="R0603" value="22k" x="6.985" y="-31.115"/>
+<element name="R23" library="resistor" package="R0603" value="22k" x="-3.175" y="-38.735"/>
+<element name="R24" library="resistor" package="R0603" value="22k" x="1.905" y="-38.735"/>
+<element name="R25" library="resistor" package="R0603" value="22k" x="6.985" y="-38.735"/>
+<element name="T15" library="transistor" package="SOT23" value="MMBTA42" x="-1.905" y="-9.525"/>
+<element name="T16" library="transistor" package="SOT23" value="MMBTA42" x="-1.905" y="-17.145"/>
+<element name="T17" library="transistor" package="SOT23" value="MMBTA42" x="-1.905" y="-24.765"/>
+<element name="T18" library="transistor" package="SOT23" value="MMBTA42" x="-1.905" y="-32.385"/>
 </elements>
 <signals>
 <signal name="VDD">
@@ -2941,6 +2951,14 @@ design rules under a new name.</description>
 <wire x1="59.055" y1="29.845" x2="59.055" y2="27.305" width="0.4064" layer="1"/>
 <wire x1="38.52" y1="75.565" x2="38.52" y2="74.51" width="0.4064" layer="1"/>
 <wire x1="38.52" y1="74.51" x2="39.37" y2="73.66" width="0.4064" layer="1"/>
+<contactref element="R22" pad="2"/>
+<contactref element="R23" pad="2"/>
+<contactref element="R25" pad="2"/>
+<contactref element="R24" pad="2"/>
+<wire x1="7.835" y1="-31.115" x2="59.055" y2="27.305" width="0" layer="19" extent="1-1"/>
+<wire x1="7.835" y1="-38.735" x2="7.835" y2="-31.115" width="0" layer="19" extent="1-1"/>
+<wire x1="2.755" y1="-38.735" x2="7.835" y2="-38.735" width="0" layer="19" extent="1-1"/>
+<wire x1="-2.325" y1="-38.735" x2="2.755" y2="-38.735" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+3V3">
 <contactref element="SV7" pad="2"/>
@@ -3530,7 +3548,6 @@ design rules under a new name.</description>
 <wire x1="132.08" y1="80.01" x2="132.08" y2="80.645" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$39">
-<contactref element="ARDUINO_NANO1" pad="1"/>
 <contactref element="R21" pad="2"/>
 <wire x1="47.84" y1="92.71" x2="51.435" y2="92.71" width="0.6096" layer="1"/>
 <via x="51.435" y="92.71" extent="1-16" drill="0.55" diameter="1.3"/>
@@ -3540,9 +3557,10 @@ design rules under a new name.</description>
 <via x="97.79" y="89.535" extent="1-16" drill="0.55" diameter="1.3"/>
 <wire x1="60.579" y1="98.044" x2="55.245" y2="92.71" width="0.6096" layer="16"/>
 <wire x1="97.79" y1="89.535" x2="96.52" y2="88.265" width="0.6096" layer="16"/>
-<wire x1="96.52" y1="88.265" x2="96.52" y2="80.645" width="0.6096" layer="16"/>
 <wire x1="90.17" y1="89.535" x2="81.661" y2="98.044" width="0.6096" layer="16"/>
 <wire x1="81.661" y1="98.044" x2="60.579" y2="98.044" width="0.6096" layer="16"/>
+<contactref element="ARDUINO_NANO1" pad="2"/>
+<wire x1="96.52" y1="88.265" x2="99.06" y2="80.645" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="3V3@2">
 <contactref element="U$1" pad="1"/>
@@ -3570,62 +3588,70 @@ design rules under a new name.</description>
 <wire x1="128.143" y1="4.627" x2="129.425" y2="3.345" width="0.254" layer="1"/>
 <wire x1="128.143" y1="9.017" x2="128.143" y2="4.627" width="0.254" layer="1"/>
 </signal>
+<signal name="N$57">
+<contactref element="R22" pad="1"/>
+<contactref element="T15" pad="3"/>
+<wire x1="-1.905" y1="-8.425" x2="6.135" y2="-31.115" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$58">
+<contactref element="R25" pad="1"/>
+<contactref element="T18" pad="3"/>
+<wire x1="-1.905" y1="-31.285" x2="6.135" y2="-38.735" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$69">
+<contactref element="R24" pad="1"/>
+<contactref element="T17" pad="3"/>
+<wire x1="-1.905" y1="-23.665" x2="1.055" y2="-38.735" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$70">
+<contactref element="R23" pad="1"/>
+<contactref element="T16" pad="3"/>
+<wire x1="-1.905" y1="-16.045" x2="-4.025" y2="-38.735" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$76">
+<contactref element="T15" pad="2"/>
+<contactref element="SV4" pad="12"/>
+<wire x1="-0.955" y1="-10.625" x2="131.35" y2="48.07" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$82">
+<contactref element="T16" pad="2"/>
+<contactref element="SV3" pad="12"/>
+<wire x1="-0.955" y1="-18.245" x2="103.85" y2="48.07" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$88">
+<contactref element="T17" pad="2"/>
+<contactref element="SV2" pad="12"/>
+<wire x1="-0.955" y1="-25.865" x2="58.85" y2="48.07" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$95">
+<contactref element="T18" pad="2"/>
+<contactref element="SV1" pad="12"/>
+<wire x1="-0.955" y1="-33.485" x2="31.35" y2="48.07" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$101">
+<contactref element="ARDUINO_NANO1" pad="1"/>
+<contactref element="T15" pad="1"/>
+<wire x1="-2.855" y1="-10.625" x2="96.52" y2="80.645" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$102">
+<contactref element="ARDUINO_NANO1" pad="20"/>
+<contactref element="T18" pad="1"/>
+<wire x1="-2.855" y1="-33.485" x2="121.92" y2="95.885" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$103">
+<contactref element="ARDUINO_NANO1" pad="26"/>
+<contactref element="T17" pad="1"/>
+<wire x1="-2.855" y1="-25.865" x2="106.68" y2="95.885" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$104">
+<contactref element="ARDUINO_NANO1" pad="30"/>
+<contactref element="T16" pad="1"/>
+<wire x1="-2.855" y1="-18.245" x2="96.52" y2="95.885" width="0" layer="19" extent="1-1"/>
+</signal>
 </signals>
 <errors>
-<approved hash="4,1,57e427ca358ec512"/>
-<approved hash="4,1,661f51832346b07a"/>
-<approved hash="4,1,d17c55502b150789"/>
-<approved hash="4,1,80875f1b61d852e2"/>
-<approved hash="4,16,87015b82a0f93e13"/>
-<approved hash="4,16,54540a9ae860be5e"/>
-<approved hash="4,16,a9027782b8fa0e8b"/>
-<approved hash="4,16,94b7bcbc4db15aa8"/>
-<approved hash="4,16,b525d273f70b3b89"/>
-<approved hash="4,16,529cd8e89c49f99f"/>
-<approved hash="4,1,60f7919cdbd4bb3e"/>
-<approved hash="4,1,b98d62a786a614e5"/>
-<approved hash="4,1,3902c3736bbc7c23"/>
-<approved hash="4,1,3efd6f53e8eed78b"/>
-<approved hash="4,1,9900314a25880a9d"/>
-<approved hash="4,1,9615d3146e7efe10"/>
-<approved hash="4,1,d3744f0d29445377"/>
-<approved hash="4,1,b521278d5f4275d8"/>
-<approved hash="4,1,b5b3a95e0ad6bc8f"/>
-<approved hash="4,1,19b49a3d9fecc826"/>
-<approved hash="4,1,932fe1c0dab2fd35"/>
-<approved hash="4,1,dfaa624d004a5be3"/>
-<approved hash="4,1,6865f71c26f282c1"/>
-<approved hash="4,1,459fa3b41fb79c7b"/>
-<approved hash="4,1,d31825269756bc0f"/>
-<approved hash="4,1,aed7b346aad720d3"/>
-<approved hash="4,1,b25a97ac5bd5db97"/>
-<approved hash="4,1,081c1336b472dda7"/>
-<approved hash="4,1,acfd3353f0eddb13"/>
-<approved hash="4,1,bc49c7c2ea05c429"/>
-<approved hash="4,1,42ab5e42a464e7d7"/>
-<approved hash="4,1,8b9a9349ad8b8205"/>
-<approved hash="4,1,f217f310e27d9e13"/>
-<approved hash="4,1,4f77070e6146cf75"/>
-<approved hash="4,1,87ba5116c542d143"/>
-<approved hash="4,1,2f2b6bc6dcd6bc17"/>
-<approved hash="4,1,13b6fe3dd7ec30ba"/>
-<approved hash="4,1,f72845c0deb78934"/>
-<approved hash="4,1,6efcf51b96f2c65e"/>
-<approved hash="4,1,73af2e484c4df7e4"/>
 <approved hash="4,1,fee2e046dd1b7396"/>
-<approved hash="4,1,b525d273f70b3b89"/>
-<approved hash="4,1,d30ad5257f11df3d"/>
-<approved hash="4,1,3c4ef172d2e6a84d"/>
-<approved hash="4,1,9def1b9f8604b793"/>
-<approved hash="4,16,60f7919cdbd4bb3e"/>
-<approved hash="4,16,3efd6f53e8eed78b"/>
-<approved hash="4,16,19b49a3d9fecc826"/>
-<approved hash="4,16,aed7b346aad720d3"/>
-<approved hash="4,16,b25a97ac5bd5db97"/>
-<approved hash="4,16,acfd3353f0eddb13"/>
 <approved hash="4,16,c342940f925027ca"/>
-<approved hash="4,16,13b6fe3dd7ec30ba"/>
-<approved hash="4,16,3c4ef172d2e6a84d"/>
 </errors>
 </board>
 </drawing>
