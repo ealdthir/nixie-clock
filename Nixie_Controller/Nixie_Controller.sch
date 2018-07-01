@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -7689,6 +7689,9 @@ by exp-project-lbr.ulp</description>
 <part name="T16" library="transistor" deviceset="BC850" device="" value="MMBTA42"/>
 <part name="T17" library="transistor" deviceset="BC850" device="" value="MMBTA42"/>
 <part name="T18" library="transistor" deviceset="BC850" device="" value="MMBTA42"/>
+<part name="P+19" library="supply1" deviceset="+5V" device=""/>
+<part name="C11" library="resistor" deviceset="C-EU" device="C0805" value="1u"/>
+<part name="C12" library="resistor" deviceset="C-EU" device="C0805" value="100n"/>
 </parts>
 <sheets>
 <sheet>
@@ -7763,9 +7766,9 @@ by exp-project-lbr.ulp</description>
 <instance part="C5" gate="G$1" x="132.08" y="121.92"/>
 <instance part="C6" gate="G$1" x="137.16" y="121.92"/>
 <instance part="C7" gate="G$1" x="142.24" y="121.92"/>
-<instance part="C8" gate="G$1" x="147.32" y="121.92"/>
-<instance part="C9" gate="G$1" x="152.4" y="121.92"/>
-<instance part="+3V3" gate="G$1" x="149.86" y="132.08"/>
+<instance part="C8" gate="G$1" x="157.48" y="121.92"/>
+<instance part="C9" gate="G$1" x="162.56" y="121.92"/>
+<instance part="+3V3" gate="G$1" x="160.02" y="132.08"/>
 <instance part="P+9" gate="1" x="139.7" y="132.08"/>
 <instance part="P+10" gate="1" x="129.54" y="132.08"/>
 <instance part="P+11" gate="1" x="119.38" y="132.08"/>
@@ -7810,6 +7813,9 @@ by exp-project-lbr.ulp</description>
 <instance part="T16" gate="G$1" x="251.46" y="403.86"/>
 <instance part="T17" gate="G$1" x="259.08" y="391.16"/>
 <instance part="T18" gate="G$1" x="266.7" y="378.46"/>
+<instance part="P+19" gate="1" x="149.86" y="132.08"/>
+<instance part="C11" gate="G$1" x="152.4" y="121.92"/>
+<instance part="C12" gate="G$1" x="147.32" y="121.92"/>
 </instances>
 <busses>
 </busses>
@@ -8053,9 +8059,11 @@ by exp-project-lbr.ulp</description>
 <wire x1="137.16" y1="111.76" x2="142.24" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="111.76" x2="147.32" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="147.32" y1="111.76" x2="152.4" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="111.76" x2="152.4" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="111.76" x2="157.48" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="111.76" x2="162.56" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="111.76" x2="162.56" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="C8" gate="G$1" pin="2"/>
-<wire x1="147.32" y1="116.84" x2="147.32" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="116.84" x2="157.48" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="C7" gate="G$1" pin="2"/>
 <wire x1="142.24" y1="116.84" x2="142.24" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="C6" gate="G$1" pin="2"/>
@@ -8066,20 +8074,27 @@ by exp-project-lbr.ulp</description>
 <wire x1="127" y1="116.84" x2="127" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="2"/>
 <wire x1="121.92" y1="116.84" x2="121.92" y2="111.76" width="0.1524" layer="91"/>
-<junction x="147.32" y="111.76"/>
+<junction x="157.48" y="111.76"/>
 <junction x="142.24" y="111.76"/>
 <junction x="137.16" y="111.76"/>
 <junction x="132.08" y="111.76"/>
 <junction x="127" y="111.76"/>
 <junction x="121.92" y="111.76"/>
-<pinref part="C1" gate="G$1" pin="2"/>
-<pinref part="C10" gate="G$1" pin="2"/>
-<wire x1="106.68" y1="116.84" x2="109.22" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="116.84" x2="111.76" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="116.84" x2="109.22" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="111.76" x2="116.84" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="111.76" x2="109.22" y2="111.76" width="0.1524" layer="91"/>
 <junction x="116.84" y="111.76"/>
-<junction x="109.22" y="116.84"/>
+<pinref part="C12" gate="G$1" pin="2"/>
+<wire x1="111.76" y1="111.76" x2="116.84" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="116.84" x2="147.32" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="C11" gate="G$1" pin="2"/>
+<wire x1="152.4" y1="116.84" x2="152.4" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="2"/>
+<wire x1="106.68" y1="116.84" x2="106.68" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="C10" gate="G$1" pin="2"/>
+<wire x1="109.22" y1="111.76" x2="111.76" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="111.76" x2="111.76" y2="116.84" width="0.1524" layer="91"/>
+<junction x="111.76" y="111.76"/>
+<junction x="152.4" y="111.76"/>
+<junction x="147.32" y="111.76"/>
 </segment>
 <segment>
 <pinref part="GND16" gate="1" pin="GND"/>
@@ -8482,14 +8497,14 @@ by exp-project-lbr.ulp</description>
 </segment>
 <segment>
 <pinref part="C8" gate="G$1" pin="1"/>
-<wire x1="147.32" y1="124.46" x2="147.32" y2="127" width="0.1524" layer="91"/>
-<wire x1="147.32" y1="127" x2="149.86" y2="127" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="124.46" x2="157.48" y2="127" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="127" x2="160.02" y2="127" width="0.1524" layer="91"/>
 <pinref part="C9" gate="G$1" pin="1"/>
-<wire x1="149.86" y1="127" x2="152.4" y2="127" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="127" x2="152.4" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="127" x2="162.56" y2="127" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="127" x2="162.56" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
-<wire x1="149.86" y1="129.54" x2="149.86" y2="127" width="0.1524" layer="91"/>
-<junction x="149.86" y="127"/>
+<wire x1="160.02" y1="129.54" x2="160.02" y2="127" width="0.1524" layer="91"/>
+<junction x="160.02" y="127"/>
 </segment>
 <segment>
 <pinref part="SV6" gate="G$1" pin="2"/>
@@ -8674,6 +8689,16 @@ by exp-project-lbr.ulp</description>
 <pinref part="P+7" gate="1" pin="+5V"/>
 <pinref part="R18" gate="G$1" pin="1"/>
 <wire x1="43.18" y1="177.8" x2="43.18" y2="175.26" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C12" gate="G$1" pin="1"/>
+<wire x1="147.32" y1="124.46" x2="147.32" y2="127" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="127" x2="149.86" y2="127" width="0.1524" layer="91"/>
+<pinref part="P+19" gate="1" pin="+5V"/>
+<wire x1="149.86" y1="127" x2="149.86" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="C11" gate="G$1" pin="1"/>
+<wire x1="152.4" y1="124.46" x2="152.4" y2="127" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="127" x2="149.86" y2="127" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+12V" class="0">

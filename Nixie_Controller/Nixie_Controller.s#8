@@ -7690,6 +7690,9 @@ by exp-project-lbr.ulp</description>
 <part name="U$3" library="Nixie_library" deviceset="USB-TYPE-C" device=""/>
 <part name="SV10" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="SV11" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="P+16" library="supply1" deviceset="+24V" device="" value="+170V"/>
+<part name="C1" library="resistor" deviceset="C-EU" device="C0805" value="100n"/>
+<part name="C10" library="resistor" deviceset="C-EU" device="C0805" value="1u"/>
 </parts>
 <sheets>
 <sheet>
@@ -7791,6 +7794,9 @@ by exp-project-lbr.ulp</description>
 <instance part="U$3" gate="G$1" x="299.72" y="142.24"/>
 <instance part="SV10" gate="G$1" x="228.6" y="208.28"/>
 <instance part="SV11" gate="G$1" x="228.6" y="193.04"/>
+<instance part="P+16" gate="1" x="109.22" y="132.08"/>
+<instance part="C1" gate="G$1" x="106.68" y="121.92"/>
+<instance part="C10" gate="G$1" x="111.76" y="121.92"/>
 </instances>
 <busses>
 </busses>
@@ -8079,6 +8085,13 @@ by exp-project-lbr.ulp</description>
 <junction x="132.08" y="111.76"/>
 <junction x="127" y="111.76"/>
 <junction x="121.92" y="111.76"/>
+<pinref part="C1" gate="G$1" pin="2"/>
+<pinref part="C10" gate="G$1" pin="2"/>
+<wire x1="106.68" y1="116.84" x2="109.22" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="116.84" x2="111.76" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="116.84" x2="109.22" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="111.76" x2="116.84" y2="111.76" width="0.1524" layer="91"/>
+<junction x="116.84" y="111.76"/>
 </segment>
 <segment>
 <pinref part="GND16" gate="1" pin="GND"/>
@@ -9096,6 +9109,17 @@ by exp-project-lbr.ulp</description>
 <pinref part="P+13" gate="1" pin="+24V"/>
 <wire x1="172.72" y1="152.4" x2="177.8" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="152.4" x2="177.8" y2="157.48" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="106.68" y1="124.46" x2="106.68" y2="127" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="127" x2="109.22" y2="127" width="0.1524" layer="91"/>
+<pinref part="C10" gate="G$1" pin="1"/>
+<wire x1="109.22" y1="127" x2="111.76" y2="127" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="127" x2="111.76" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="P+16" gate="1" pin="+24V"/>
+<wire x1="109.22" y1="129.54" x2="109.22" y2="127" width="0.1524" layer="91"/>
+<junction x="109.22" y="127"/>
 </segment>
 </net>
 </nets>
